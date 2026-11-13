@@ -5,7 +5,6 @@ public class EliminarValoresDuplicados {
     static int[] noRepet(int[] vet) {
         int[] aux = new int[vet.length];
         int c = 0;
-        int numunicos = 0;
         
         for (int i = 0; i < vet.length; i++) {
             boolean jaExiste = false;
@@ -20,11 +19,10 @@ public class EliminarValoresDuplicados {
             if (!jaExiste) {
                 aux[c] = vet[i];
                 c++;
-                numunicos++;
             }
         }
         
-        int[] vet_semRepeticao = new int[numunicos];
+        int[] vet_semRepeticao = new int[c];
         for (int i = 0; i < vet_semRepeticao.length; i++) {
             if (aux[i] != 0) {
                 vet_semRepeticao[i] = aux[i];
